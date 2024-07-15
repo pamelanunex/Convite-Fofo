@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Fofo</title>
+</head>
+
+<style>
+ body {
+            background-color: #c8a2c8;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 15px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: monospace;
+        }
+
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: #c8a2c8;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -130px;
+        }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: #c8a2c8;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+
+            .img{
+                 width: 90px;
+                 height: 20px;
+            }
+            
+        }
+</style>
+
+    <div class ="painel">
+        <h1>Oi, quero te fazer um CONVITE!</h1>
+        <img src="https://i.pinimg.com/originals/be/4c/b9/be4cb962b15a0b0fa473dc98f5c9d196.gif" alt="">
+        <h2>Confia em mim e aceita?</h2>
+
+        <a href="Convite fofo.png"><button id = "sim" > SIM! </button></a>
+        <button onmouseover="fuja()" id="nao"> NÃO! </button>
+
+    </div>
+
+    <script>
+        function fuja(){
+    var botaonao = document.getElementById ("nao")
+
+    var larguraJanela = window.innerWidth;
+    var alturaJanela = window.innerHeight;
+
+    var maxX = larguraJanela - botaonao.offsetWidth;
+    var maxY = alturaJanela - botaonao.offsetHeight
+
+    var aleatorioX = Math.floor (Math.random() * maxX);
+    var aleatorioY = Math.floor (Math.random() * maxY);
+
+    botaonao.style.left = aleatorioX + "px";
+    botaonao.style.top = aleatorioY + "px";
+
+}
+
+    </script>
+    
+</body>
+</html>
